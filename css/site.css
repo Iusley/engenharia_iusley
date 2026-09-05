@@ -1226,6 +1226,17 @@ textarea {
 .compact-services .section-heading h2 {
   font-size: clamp(2rem, 3vw, 2.6rem);
 }
+.carousel-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8a4a21;
+  font-size: 0.72rem;
+  margin: 12px 0 0;
+}
+.carousel-hint i {
+  font-size: 0.65rem;
+}
 .service-carousel {
   min-width: 0;
 }
@@ -1467,6 +1478,10 @@ textarea {
   }
   .compact-services .section-heading h2 {
     margin-bottom: 12px;
+  }
+  .carousel-hint {
+    margin-top: 10px;
+    font-size: 0.7rem;
   }
   .service-slide {
     padding: 26px 22px;
