@@ -233,8 +233,34 @@ h3 {
   background: var(--navy);
   color: #fff;
   overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(8, 30, 40, 0.97) 0%, rgba(16, 46, 60, 0.85) 52%, rgba(16, 46, 60, 0.62) 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
 }
 .hero-grid {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 65px;
